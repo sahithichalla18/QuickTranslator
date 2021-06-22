@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <title>Translator</title>
+  </head>
+  <body>
+    <div class="container">
+        <br>
+        <br>
+        <center>
+            <div>
+
+            </div>
+            <form action="{% url 'translated'%}" method="get">
+        <div class="mb-3">
+             <button type="button" class="btn btn-primary btn-lg" onclick="location.href='{% url 'capturePage'%}'">Capture Image</button>
+                <button type="button" class="btn btn-primary btn-lg" onclick="location.href='{% url 'uploadPage'%}'">Upload Image</button><br><br>
+            <label for="exampleFormControlTextarea1" class="form-label"><h3>Type Text In Any Language</h3></label>
+            <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+            <br>
+            <h3>Select Language to Translate Text</h3>
+            <select name="lang" class="form-select" aria-label="Default select example">
+                <option value="hi">Hindi</option>
+                <option value="en">English</option>
+                <option value="it">Italian</option>
+                <option value="fr">French</option>
+                <option value="zh-cn">Chinese</option>
+                <option value="ja">Japanese</option>
+                <option value="de">German</option>
+                <option value="gu">Gujarati</option>
+                <option value="bn">Bengali</option>
+            </select>
+
+            <br>
+            <button type="submit" class="btn btn-primary">Translate</button>
+            </form>
+        </center>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </body>
+</html>
